@@ -1,16 +1,20 @@
+// Rudderstack Configuration
+const dataPlaneURL = 'https://vanbrandsqvg.dataplane.rudderstack.com';
+const writeKey = '2ApxFchy93CP8L2zfPXZSwDsivZ';
+
 export const analyticsScript = `
     rudderanalytics = window.rudderanalytics = [];
     var methods = [
-        "load",
-        "page",
-        "track",
-        "identify",
-        "alias",
-        "group",
-        "ready",
-        "reset",
-        "getAnonymousId",
-        "setAnonymousId",
+        'load',
+        'page',
+        'track',
+        'identify',
+        'alias',
+        'group',
+        'ready',
+        'reset',
+        'getAnonymousId',
+        'setAnonymousId',
     ];
     for (var i = 0; i < methods.length; i++) {
     var method = methods[i];
@@ -22,7 +26,6 @@ export const analyticsScript = `
         };
     })(method);
     }
-
-    rudderanalytics.load(<WRITE_KEY>, <DATA_PLANE_URL>);
+    rudderanalytics.load("${writeKey}", "${dataPlaneURL}");
     rudderanalytics.page();
 `

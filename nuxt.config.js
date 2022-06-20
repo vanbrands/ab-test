@@ -22,7 +22,8 @@ export default {
     script: [
       { hid: 'rudderstack-js', src: 'https://cdn.rudderlabs.com/v1.1/rudder-analytics.min.js', defer: true },
       { hid: 'rudderstack-js-init', type: 'text/javascript', charset: 'utf-8', innerHTML: analyticsScript }
-    ]
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
